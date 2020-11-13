@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="14095" started-at="2020-11-13T11:12:21Z" finished-at="2020-11-13T11:12:35Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="14095" started-at="2020-11-13T11:12:21Z" finished-at="2020-11-13T11:12:35Z">
+      <class name="restAPITesting.Store">
+        <test-method status="PASS" signature="addOrderForPet()[pri:6, instance:restAPITesting.Store@4fcd19b3]" name="addOrderForPet" duration-ms="1354" started-at="2020-11-13T11:12:31Z" finished-at="2020-11-13T11:12:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addOrderForPet -->
+        <test-method status="PASS" signature="getPurchaseOrderByID()[pri:7, instance:restAPITesting.Store@4fcd19b3]" name="getPurchaseOrderByID" duration-ms="1347" started-at="2020-11-13T11:12:33Z" finished-at="2020-11-13T11:12:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPurchaseOrderByID -->
+        <test-method status="PASS" signature="removePurchaseOrderByID()[pri:8, instance:restAPITesting.Store@4fcd19b3]" name="removePurchaseOrderByID" duration-ms="1364" started-at="2020-11-13T11:12:34Z" finished-at="2020-11-13T11:12:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removePurchaseOrderByID -->
+      </class> <!-- restAPITesting.Store -->
+      <class name="restAPITesting.Pet">
+        <test-method status="PASS" signature="addPet()[pri:1, instance:restAPITesting.Pet@5204062d]" name="addPet" duration-ms="3218" started-at="2020-11-13T11:12:21Z" finished-at="2020-11-13T11:12:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPet -->
+        <test-method status="PASS" signature="updatePet()[pri:2, instance:restAPITesting.Pet@5204062d]" name="updatePet" duration-ms="1982" started-at="2020-11-13T11:12:24Z" finished-at="2020-11-13T11:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePet -->
+        <test-method status="PASS" signature="getPetByStatus()[pri:3, instance:restAPITesting.Pet@5204062d]" name="getPetByStatus" duration-ms="2042" started-at="2020-11-13T11:12:26Z" finished-at="2020-11-13T11:12:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetByStatus -->
+        <test-method status="PASS" signature="updatePetWithFormData()[pri:4, instance:restAPITesting.Pet@5204062d]" name="updatePetWithFormData" duration-ms="1385" started-at="2020-11-13T11:12:28Z" finished-at="2020-11-13T11:12:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetWithFormData -->
+        <test-method status="PASS" signature="deletePet()[pri:5, instance:restAPITesting.Pet@5204062d]" name="deletePet" duration-ms="1374" started-at="2020-11-13T11:12:30Z" finished-at="2020-11-13T11:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePet -->
+      </class> <!-- restAPITesting.Pet -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
