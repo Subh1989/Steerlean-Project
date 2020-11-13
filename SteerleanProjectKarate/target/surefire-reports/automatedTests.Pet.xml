@@ -1,0 +1,34 @@
+<testsuite failures="0" name="automatedTests/Pet.feature" skipped="0" tests="1" time="7.621738">
+  <testcase classname="automatedTests.Pet" name="Add a new pet to the store, update it, find pets by status, update pet with form data, delete it" time="7.621738">
+    <system-out>* def addPayload = read('classpath:Resources/AddPetPayload.json') ......... passed
+* def global = read('classpath:Resources/global.json') .................... passed
+* header Content-Type = 'application/json' ................................ passed
+Given url global.URI + global.petResource ................................. passed
+When json payload = addPayload[1] ......................................... passed
+And request payload ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def pID = response.id ................................................... passed
+Given url global.URI + global.petResource ................................. passed
+When json payload = addPayload[2] ......................................... passed
+And request payload ....................................................... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.name == "doggie9988" ................................... passed
+Given url global.URI + global.petResource + '/findByStatus' ............... passed
+And param status = "available" ............................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Given url global.URI + global.petResource + '/' + pID ..................... passed
+And form field name = "ABCD998" ........................................... passed
+And form field status = "sold" ............................................ passed
+And header Content-Type = 'application/x-www-form-urlencoded' ............. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.code == 200 ............................................ passed
+Given url global.URI + global.petResource + '/' + pID ..................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed
+And match response.code == 200 ............................................ passed</system-out>
+  </testcase>
+</testsuite>
