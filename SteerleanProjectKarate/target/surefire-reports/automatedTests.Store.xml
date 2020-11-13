@@ -1,0 +1,21 @@
+<testsuite failures="0" name="automatedTests/Store.feature" skipped="0" tests="1" time="8.501888">
+  <testcase classname="automatedTests.Store" name="Perform placing an order for pet and finding purchase order by ID and delete purchase order by ID" time="8.501888">
+    <system-out>* def addPayload = read('classpath:Resources/AddPetPayload.json') ......... passed
+* def global = read('classpath:Resources/global.json') .................... passed
+* headers {Content-Type : 'application/json', Accept : 'application/json'} . passed
+Given url global.URI + global.storeResource ............................... passed
+When json payload = addPayload[0] ......................................... passed
+And request payload ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def pID = response.id ................................................... passed
+Given url global.URI + global.storeResource + '/' + pID ................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.status == "placed" ..................................... passed
+Given url global.URI + global.storeResource + '/' + pID ................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed
+And match response.code == 200 ............................................ passed</system-out>
+  </testcase>
+</testsuite>
